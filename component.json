@@ -1,0 +1,15 @@
+{
+  "name": "route-manager",
+  "repo": "apily/route-manager",
+  "version": "0.0.1",
+  "description": "Route manager component",
+  "keywords": ["route", "bind"],
+  "scripts": ["index.js"],
+  "dependencies": {
+  },
+  "development": {
+    "component/router": "*",
+    "component/assert": "*"
+  },
+  "license": "MIT"
+}
