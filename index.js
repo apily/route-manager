@@ -1,4 +1,3 @@
-
 /**
  * route-manager
  * Route manager component
@@ -54,5 +53,24 @@ RouteManager.prototype.bind = function (route, method) {
 
   router.route(route, fn);
 
+  return this;
+};
+
+/**
+ * bind_all
+ * Bind `route` to  `method`.
+ * for each pair `route`/`method` in `obj`
+ *
+ * @param {Object} obj
+ *   @param {String} event `event` name
+ *   @param {String} method `method` name
+ * @return {RouteManager} this for chaining
+ * @api public
+ */
+
+RouteManager.prototype.bind_all = function (obj) {
+  Object.keys(obj).forEach(function(key) {
+    this.bind(key, obj[key]);
+  }, this);
   return this;
 };
